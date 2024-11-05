@@ -6,7 +6,7 @@ If you want to learn more about it, you can see
 the [official documentation](http://graphql.org/learn/schema/)
 or this [cheat sheet](https://github.com/sogko/graphql-shorthand-notation-cheat-sheet).
 
-#### Configuration
+## Configuration
 
 ```
 overblog_graphql:
@@ -20,9 +20,9 @@ overblog_graphql:
                     dir: "%kernel.project_dir%/config/graphql/types"
 ```
 
-#### Usage
+## Usage
 
-##### Define Types
+### Define Types
 
 > [GraphQL documentation about types and fields](https://graphql.github.io/learn/schema/#object-types-and-fields).
 
@@ -38,7 +38,7 @@ type Character {
 }
 ```
 
-##### Define Enumeration types
+### Define Enumeration types
 
 > [GraphQL documentation about Enumerations types](https://graphql.github.io/learn/schema/#enumeration-types).
 
@@ -51,7 +51,7 @@ enum Episode {
 }
 ```
 
-##### Define Interfaces
+### Define Interfaces
 
 > [GraphQL documentation about Interfaces](https://graphql.github.io/learn/schema/#interfaces).
 
@@ -83,7 +83,7 @@ type Droid implements Character {
 }
 ```
 
-##### Define queries
+### Define queries
 
 > [GraphQL documentation about Query type](https://graphql.github.io/learn/schema/#the-query-and-mutation-types).
  
@@ -103,7 +103,7 @@ overblog_graphql:
             query: RootQuery
 ```
 
-##### Define mutations
+### Define mutations
 
 > [GraphQL documentation about Mutation type](https://graphql.github.io/learn/schema/#the-query-and-mutation-types).
 

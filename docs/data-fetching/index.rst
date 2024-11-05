@@ -1,7 +1,10 @@
 Data fetching
 =============
 
-* [Batching](batching.md)
-* [Promise](promise.md)
+.. toctree::
+  :maxdepth: 2
+
+  batching
+  promise
 
 Next step [secure your server](../security/index.md).

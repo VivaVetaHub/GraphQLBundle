@@ -1,5 +1,5 @@
-Type System
-============
+Type System : Presentation
+==========================
 
 Types
 -----
@@ -21,24 +21,25 @@ Types can be define 3 different ways:
     * [Non-Null](non-null.md)
 
     You can also define custom dirs using config:
-    ```yaml
-    overblog_graphql:
-        definitions:
-            mappings:
-                # auto_discover: false # to disable bundles and root dir auto discover
-                types:
-                    -
-                        type: yaml # or graphql or annotation null
-                        dir: "%kernel.root_dir%/.../mapping" # sub directories are also searched
-                        # suffix: .types # use to change default file suffix
-                    -
-                        types: [yaml, graphql] # to include different types from the same dir
-                        dir: "%kernel.root_dir%/.../mapping"
-    ```
+
+        ```yaml
+        overblog_graphql:
+            definitions:
+                mappings:
+                    # auto_discover: false # to disable bundles and root dir auto discover
+                    types:
+                        -
+                            type: yaml # or graphql or annotation null
+                            dir: "%kernel.root_dir%/.../mapping" # sub directories are also searched
+                            # suffix: .types # use to change default file suffix
+                        -
+                            types: [yaml, graphql] # to include different types from the same dir
+                            dir: "%kernel.root_dir%/.../mapping"
+        ```
 
 2. **The PHP way**
 
-    You can also declare PHP types (any subclass of `GraphQL\Type\Definition\Type`) 
+    You can also declare PHP types (any subclass of `GraphQL\Type\Definition\Type`)
     in `src/*Bundle/GraphQL` or `app/GraphQL`
     they will be auto discover (thanks to auto mapping). Auto map classes are accessible by service id
     (example: `AppBundle\GraphQL\Type\DateTimeType`), you can also alias a type by

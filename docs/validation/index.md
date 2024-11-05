@@ -5,7 +5,7 @@
 This bundle provides a tight integration with the [Symfony Validator Component](https://symfony.com/doc/current/components/validator.html) 
 to validate user input data. It currently supports only GraphQL schemas defined with YAML.
 
-###  Contents:
+###  Contents
 - [Overview](#overview)
 - [How does it work?](#how-does-it-work)
 - [Applying of validation constraints](#applying-of-validation-constraints)
@@ -89,7 +89,7 @@ Birthdate:
                 validation:
                     - Range: { min: 1, max: 12 }
             year:
-                type: Int!	
+                type: Int!
                 validation:
                     - Range: { min: 1900, max: 2019 }
 ```
@@ -247,7 +247,7 @@ Period:
                 validation:
                     - Date: ~
                     - GreaterThan:
-                          propertyPath: 'startDate'	
+                          propertyPath: 'startDate'
 
 Birthday:
     type: input-object
@@ -262,9 +262,9 @@ Birthday:
                 validation:
                     - Range: { min: 1, max: 12 }
             year:
-                type: Int!	
+                type: Int!
                 validation:
-                    - Range: { min: 1900, max: today }					
+                    - Range: { min: 1900, max: today }
 ```
 
 The configuration above would produce an object composition as shown in the UML diagram below:
@@ -761,7 +761,9 @@ Birthday:
 Here we injected the `validator` variable into the `register` resolver. By doing so we are turning the automatic 
 validation off to perform it inside the resolver (see [Validating inside resolvers](#validating-inside-resolvers)). The 
 injected instance of the `InputValidator` class could be used in a resolver as follows:
+
 ```php
+<?php
 namespace App\GraphQL\Mutation\Mutation
 
 use Overblog\GraphQLBundle\Definition\Argument;
